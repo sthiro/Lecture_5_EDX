@@ -3,10 +3,10 @@ import pytest
 
 def test_default():
 
-    assert "hello" == 0
-    assert "hi" == 20
-    assert "welcome" == 100
-    assert "what's happening" == 100
+    assert value("hello") == 0
+    assert value("hi") == 20
+    assert value("welcome") == 100
+    assert value("what's happening") == 100
 
 def test_Case():
 
