@@ -2,13 +2,15 @@
 # whether inputted in uppercase or lowercase.
 # Vowel => {A,E,I,O,U}
 
-s =  input("Input: ")
-print("Output: ", end="")
+
+
 
 
 def main():
-    pass
 
+    s =  input("Input: ")
+    output = shorten(s) #Input the str
+    print(output)
 
 def shorten(word):
 
