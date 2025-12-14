@@ -34,10 +34,10 @@ def convert(fraction):
     input_list = fraction.split("/")
     x, y = float(input_list[0]), float(input_list[1])  # X / Y Format
 
-    if not (x.is_integer() and y.is_integer()) or x > y or (x < 0 or y < 0):  # ex 1.0 is integer, 4.5 isn't a integer
-        raise ValueError("Invalid input !")
+    output = (x / y) * 100  # Calculates percentage, Raises ZeroDivisionError if y = 0
 
-    output = (x / y) * 100  # Calculates percentage
+    if not (x.is_integer() and y.is_integer()) or x > y or (x < 0 or y < 0):  # ex 1.0 is integer, 4.5 isn't a integer
+        raise ValueError("Invalid input !") # Rasing value error
 
     return round(output)  # Rounds the output percentage, it's a whole number
 
