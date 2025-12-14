@@ -1,13 +1,24 @@
 from plates import is_valid
 import pytest
 
-def test_length():
+def test_default():
+    assert is_valid("CS50") == True
+    assert is_valid("CS05") == False
+    assert is_valid("CS50P") == False
+    assert is_valid("PI3.14") == False
+    assert is_valid("H") == False
+    assert is_valid("OUTATIME") == False
+    
 
+
+
+def test_length():
+    
     assert is_valid("ABCS50") == True
     assert is_valid("CS") == True
     assert is_valid("CS50") == True
 
-    
+    assert is_valid("") == False
     assert is_valid("ABCDEFG") == False
     assert is_valid("C") == False
     assert is_valid("CS59999") == False
