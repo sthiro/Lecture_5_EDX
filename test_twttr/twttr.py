@@ -3,9 +3,6 @@
 # Vowel => {A,E,I,O,U}
 
 
-
-
-
 def main():
 
     s =  input("Input: ")
@@ -23,4 +20,4 @@ def shorten(word):
 
 
 if __name__ == "__main__":
-    main()        
+    main()
