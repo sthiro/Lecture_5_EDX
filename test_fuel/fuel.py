@@ -15,7 +15,7 @@ def main():
             break
 
 
-def gauge(percentage):
+def gauge(percentage: int) -> str:
 
     if percentage <= 1:
         gauge_val = "E"
@@ -26,10 +26,10 @@ def gauge(percentage):
     else:
         gauge_val = f"{percentage}%"
 
-    return gauge_val
+    return gauge_val # Return string value
 
 
-def convert(fraction):
+def convert(fraction: str) -> int:
 
     input_list = fraction.split("/")
     x, y = float(input_list[0]), float(input_list[1])  # X / Y Format
@@ -39,7 +39,7 @@ def convert(fraction):
     if not (x.is_integer() and y.is_integer()) or x > y or (x < 0 or y < 0):  # ex 1.0 is integer, 4.5 isn't a integer
         raise ValueError("Invalid input !") # Rasing value error
 
-    return round(output)  # Rounds the output percentage, it's a whole number
+    return round(output)  # Rounds the output percentage and  it's a whole number
 
 
 if __name__ == "__main__":
